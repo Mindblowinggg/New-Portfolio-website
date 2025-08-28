@@ -14,15 +14,15 @@ const App = () => {
     <BrowserRouter>
       <div className="bg-[#E4E2DB] h-screen">
         <Navbar/>
-        <Customcursor/>
-        {/* <Routes>
+        {/* <Customcursor/> */}
+        <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
+          {/* <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/more" element={<More />} />
-        </Routes> */}
+          <Route path="/more" element={<More />} /> */}
+        </Routes>
       </div>
     </BrowserRouter>
   );

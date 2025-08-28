@@ -47,11 +47,11 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setDropdown(null);
-    }, 100);
+    }, 150);
   };
 
   useEffect(() => {
-    // Component unmount hone par timeout clear karna zaroori hai
+   
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);

@@ -12,8 +12,11 @@ const Customcursor = () => {
     <main className={styles.main}>
       <motion.div
         className={styles.mask}
+        initial={{
+          WebkitMaskSize: "20px",
+        }}
         animate={{
-          WebkitMaskPosition: `${x-size/2}px ${y-size/2}px`,
+          WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.4 }}
