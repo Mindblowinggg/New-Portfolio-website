@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import navbarstyles from "../Navbar/Navbar.module.css";
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { RxCross1 } from "react-icons/rx";
