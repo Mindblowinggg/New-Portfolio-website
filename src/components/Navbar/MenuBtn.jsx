@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MenuBtn.css";
 
-const MenuBtn = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+const MenuBtn = ({menuOpen,handleToggle}) => {
+  
   return (
     <div className="menubtn">
       <span  onClick={handleToggle} className="menu-text">{menuOpen ? "CLOSE" : "MENU"}</span>
