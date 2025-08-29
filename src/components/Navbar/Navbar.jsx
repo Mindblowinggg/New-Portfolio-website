@@ -10,9 +10,9 @@ const Navbar = () => {
       <div className={navbarstyles.navlogo}>
         <h1>AK</h1>
       </div>
-      <div className={navbarstyles.MenuDiv}>
+     
         <MenuBtn/>
-      </div>
+      
     </nav>
   );
 };
