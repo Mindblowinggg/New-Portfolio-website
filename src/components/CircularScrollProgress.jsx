@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { BsDot } from 'react-icons/bs'; // <--- Yeh line add karein
+import { FaArrowUp } from 'react-icons/fa'; // Import the arrow up icon from Font Awesome
 
 const CircularScrollProgressWithLibrary = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -10,15 +10,24 @@ const CircularScrollProgressWithLibrary = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPosition = window.scrollY;
       const percentage = (scrollPosition / totalHeight) * 100;
-      setScrollPercentage(percentage);
+      // Ensure percentage is not NaN for very short pages
+      setScrollPercentage(isNaN(percentage) ? 0 : percentage);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div
+      onClick={scrollToTop}
       style={{
         position: 'fixed',
         bottom: 20,
@@ -26,8 +35,11 @@ const CircularScrollProgressWithLibrary = () => {
         width: 60,
         height: 60,
         zIndex: 1000,
-      }}
-    >
+        cursor: 'pointer',
+        display: 'flex',          // Flexbox use karein
+        justifyContent: 'center', // Horizontal center
+        alignItems: 'center',     // Vertical center
+      }}>
       <CircularProgressbar
         value={scrollPercentage}
         styles={buildStyles({
@@ -35,20 +47,14 @@ const CircularScrollProgressWithLibrary = () => {
           trailColor: '#d6d6d6',
         })}
       />
-      {/* <--- Yeh naya code hai icon ke liye ---> */}
-      <div
+      {/* Icon ko CircularProgressbar ke upar render karein */}
+      <FaArrowUp
         style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)', // Icon ko bilkul center mein lane ke liye
-          fontSize: '40px', // Icon ka size adjust karein
-          color: '#3498db', // Icon ka rang
+          position: 'absolute', // Absolute position karein
+          fontSize: '20px',    // Icon ka size set karein
+          color: '#34495e',    // Icon ka color set karein
         }}
-      >
-        <BsDot /> {/* <--- Aapka dot icon yahan hai ---> */}
-      </div>
-      {/* <--- Naya code yahan tak hai ---> */}
+      />
     </div>
   );
 };
