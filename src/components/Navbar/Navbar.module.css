@@ -1,43 +1,16 @@
-.NAV {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 500;
-  font-style: normal;
-  position: fixed;
-  background-color: antiquewhite;
-  top: 0;
-  left: 0;
+.nav {
+  height: 70px;
   width: 100vw;
-  z-index: 200;
-}
-
-
-.NAVLINKS ul li a {
+  background-color: #e5e3dc;
+  padding: 15px 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.link {
-  position: relative;
+.MenuDiv {
   display: flex;
   align-items: center;
-}
-
-.text {
-  position: relative;
-}
-
-.text::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: rgb(129, 55, 2);
-  transition: width 0.3s ease-in-out;
-}
-
-.link:hover .text::after,
-.link.active .text::after {
-  width: 100%;
+  justify-items: center;
+  gap: 5px;
 }
