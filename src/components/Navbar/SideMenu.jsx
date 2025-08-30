@@ -15,7 +15,7 @@ const SideMenu = () => {
 
 
 // its bcoz i want sidemenudiv opacity gets 0 after list elements animation gets done
-  const totalLiTagsExitDuration = (menuItems.length - 1) * 0.1 + 0.5;
+  const totalLiTagsExitDuration = (menuItems.length - 1) * 0.05 + 0.5;
   //////////////////////////////////////////////////////////////////////////
 
   return (
