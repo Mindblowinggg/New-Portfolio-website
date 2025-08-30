@@ -5,6 +5,9 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <div style={{fontSize:40}}>
+        AMAN
+      </div>
     </>
   );
 };

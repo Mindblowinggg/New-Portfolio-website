@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion"; 
 import navbarstyles from "../Navbar/Navbar.module.css";
@@ -14,7 +15,8 @@ const Navbar = () => {
         <h1>AK</h1>
       </div>
       <MenuBtn menuOpen={menuOpen} handleToggle={handleToggle} />
-      <AnimatePresence> {/* Wrap with AnimatePresence */}
+      <AnimatePresence>
+       
         {menuOpen && <SideMenu />}
       </AnimatePresence>
     </nav>
