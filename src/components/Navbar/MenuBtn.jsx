@@ -4,8 +4,8 @@ import "./MenuBtn.css";
 const MenuBtn = ({menuOpen,handleToggle}) => {
   
   return (
-    <div className="menubtn">
-      <span  onClick={handleToggle} className="menu-text">{menuOpen ? "CLOSE" : "MENU"}</span>
+    <div  onClick={handleToggle} className="menubtn">
+      <span  className="menu-text">{menuOpen ? "CLOSE" : "MENU"}</span>
       <input 
         onChange={handleToggle} 
         id="checkbox" 
