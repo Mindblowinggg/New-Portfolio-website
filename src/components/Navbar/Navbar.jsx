@@ -17,7 +17,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
     setTimeout(() => {
       setIsToggling(false);
-    }, 1200);
+    }, 1000);
   };
 
   return (
