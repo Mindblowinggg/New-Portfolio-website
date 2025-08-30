@@ -7,8 +7,11 @@ const App = () => {
     <>
       <Navbar />
       <Home/>
+      <Home/>
     </>
   );
 };
 
 export default App;
+
+
