@@ -4,6 +4,7 @@ import navbarstyles from "../Navbar/Navbar.module.css";
 import MenuBtn from "./MenuBtn";
 import SideMenu from "./SideMenu";
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,7 +18,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
     setTimeout(() => {
       setIsToggling(false);
-    }, 1200);
+    }, 1150);
   };
 
   return (
