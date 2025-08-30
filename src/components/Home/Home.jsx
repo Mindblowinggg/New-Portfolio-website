@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../Home/Home.module.css";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import SocialLinks from "./SocialLinks";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
           FrontEnd developer <br /> (React js.)
         </motion.p>
       </div>
+      <SocialLinks/>
     </div>
   );
 };
