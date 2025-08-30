@@ -23,7 +23,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 8px;
-  transition-duration: 0.5s;
+  transition-duration: 1.2s;
 }
 
 .bars {
@@ -34,7 +34,7 @@
 }
 
 #bar2 {
-  transition-duration: 0.8s;
+  transition-duration: 1s;
 }
 
 #bar1 {
@@ -47,12 +47,12 @@
 
 #checkbox:checked + .toggle .bars {
   position: absolute;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 
 #checkbox:checked + .toggle #bar2 {
   transform: scaleX(0);
-  transition-duration: 0.1s;
+  transition-duration: 1s;
 }
 
 #checkbox:checked + .toggle #bar1 {
