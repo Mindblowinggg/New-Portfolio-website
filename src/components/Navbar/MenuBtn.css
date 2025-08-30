@@ -6,6 +6,7 @@
   gap: 10px;
   user-select: none;
   outline: none; 
+  -webkit-tap-highlight-color: transparent; 
 }
 
 #checkbox {
@@ -56,17 +57,17 @@
 
 #checkbox:checked + .toggle #bar1 {
   width: 100%;
-  transform: rotate(45deg);
-  transition-duration: 0.5s;
+  transform: rotate(225deg);
+  transition-duration: 1s;
 }
 
 #checkbox:checked + .toggle #bar3 {
   width: 100%;
-  transform: rotate(-45deg);
-  transition-duration: 0.5s;
+  transform: rotate(-225deg);
+  transition-duration: 1s;
 }
 
 #checkbox:checked + .toggle {
-  transition-duration: 0.5s;
-  transform: rotate(180deg);
+  transition-duration: 1s;
+  transform: rotate(360deg);
 }
