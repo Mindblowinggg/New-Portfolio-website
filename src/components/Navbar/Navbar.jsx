@@ -8,11 +8,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isToggling, setIsToggling] = useState(false);
 
-  // States for the scroll-based animation
+  
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
-  // Scroll animation logic
+
   useEffect(() => {
     let prevScrollY = scrollY.get();
 
@@ -46,7 +46,7 @@ const Navbar = () => {
         hidden: { y: "-100%" },
       }}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
     >
       <div className={navbarstyles.navlogo}>
         <h1>AK</h1>
