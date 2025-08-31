@@ -1,5 +1,7 @@
 .nav {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 70px;
   width: 100vw;
   background-color: #e5e3dc;
