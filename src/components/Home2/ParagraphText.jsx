@@ -9,7 +9,7 @@ const ParagraphText = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.9", "start 0.25"],
+    offset: ["start 0.8", "start 0.30"],
   });
 
   const words = text.split(" ");
@@ -31,14 +31,14 @@ const ParagraphText = () => {
 
   return (
     <p className={styles.paragraph} ref={element}>
-      {words.map((word, i) => {
-        const start = i / words.length;
+      {words.map((word, index) => {
+        const start = index / words.length;
         const end = start + (1 / words.length);
         
         return (
           <Word
-            key={i}
-            word={word + ' '}
+            key={index}
+            word={word}
             scrollYProgress={scrollYProgress}
             start={start}
             end={end}
