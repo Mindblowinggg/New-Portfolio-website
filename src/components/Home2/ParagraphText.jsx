@@ -19,13 +19,12 @@ const ParagraphText = () => {
     const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
 
     return (
-      <span className={styles.word}>
-
-      <span  className={styles.shadow}>{word} </span>
-      <motion.span style={{ opacity }} className={styles.word}>
+      <p className={styles.word}>
+      <p  className={styles.shadow}>{word}</p>
+      <motion.p style={{ opacity }} className={styles.word}>
         {word}
-      </motion.span>
-      </span>
+      </motion.p>
+      </p>
     );
   };
 
