@@ -17,7 +17,7 @@ const Navbar = () => {
     let prevScrollY = scrollY.get();
 
     return scrollY.on("change", (latestScrollY) => {
-      if (latestScrollY > prevScrollY && latestScrollY > 200) {
+      if (latestScrollY > prevScrollY && latestScrollY > 10) {
         setHidden(true);
       } else if (latestScrollY < prevScrollY) {
         setHidden(false);
