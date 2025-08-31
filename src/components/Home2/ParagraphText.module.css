@@ -3,7 +3,8 @@
   padding: 20px;
   display: flex;
   flex-wrap:wrap;
-
+  font-weight: 500;
+  margin-top: 5%;
 }
 
 .word{

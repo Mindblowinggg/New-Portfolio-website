@@ -1,10 +1,22 @@
-.Home2container{
+.Home2container {
   position: relative;
   height: 100vh;
   width: 100%;
   border-bottom: 1px solid black;
-   background-color: #e5e3dc;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  background-color: #e5e3dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.profilepic {
+  height: 50%;
+  width: 50%;
+  border-radius: 10%;
+  overflow: hidden; 
+  margin-top: 5%;
+  background-image: url(/public/profileimg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
