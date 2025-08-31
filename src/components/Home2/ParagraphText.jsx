@@ -1,43 +1,44 @@
 import React, { useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { useScroll, motion, useTransform } from 'framer-motion';
 import styles from './ParagraphText.module.css';
 
-const text = "I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations. I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.";
+const text = "I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations. ";
 
 const ParagraphText = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.83", "start 0.4"],
+    offset: ["start 0.84", "start 0.26"],
   });
 
   const words = text.split(" ");
 
-  // Word component inside the ParagraphText component
+  // Nested Word component 
   const Word = ({ word, scrollYProgress, start, end }) => {
-    const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+    const opacity = useTransform(scrollYProgress, [start, end], [0.3 , 1]); 
+    const color = useTransform(
+      scrollYProgress,
+      [start, end],
+      ["rgb(150, 150, 150)", "rgb(0, 0, 0)"] 
+    );
 
     return (
-      <p className={styles.word}>
-      <p  className={styles.shadow}>{word}</p>
-      <motion.p style={{ opacity }} className={styles.word}>
+      <motion.span style={{ opacity, color }} className={styles.word}>
         {word}
-      </motion.p>
-      </p>
+      </motion.span>
     );
   };
 
   return (
     <p className={styles.paragraph} ref={element}>
-      {words.map((word, index) => {
-        const start = index / words.length;
+      {words.map((word, i) => {
+        const start = i / words.length;
         const end = start + (1 / words.length);
         
         return (
           <Word
-            key={index}
-            word={word}
+            key={i}
+            word={word + ' '}
             scrollYProgress={scrollYProgress}
             start={start}
             end={end}
