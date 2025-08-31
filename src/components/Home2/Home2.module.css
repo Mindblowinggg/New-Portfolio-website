@@ -17,7 +17,7 @@
   border-radius: 10px;
   overflow: hidden; 
   margin-top: 5%;
-  background-image: url(/public/profileimg.webp);
+  background-image: url(./public/profileimg.webp);
   background-repeat: no-repeat;
   background-size: cover;
  background-position: center;
