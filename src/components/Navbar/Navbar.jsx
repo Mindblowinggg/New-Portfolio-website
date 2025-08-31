@@ -1,15 +1,32 @@
-import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import navbarstyles from "../Navbar/Navbar.module.css";
 import MenuBtn from "./MenuBtn";
 import SideMenu from "./SideMenu";
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isToggling, setIsToggling] = useState(false);
 
-  const [isToggling, setIsToggling] = useState(false); // New state to prevent rapid clicks
+  // States for the scroll-based animation
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
 
+  // Scroll animation logic
+  useEffect(() => {
+    let prevScrollY = scrollY.get();
+
+    return scrollY.on("change", (latestScrollY) => {
+      if (latestScrollY > prevScrollY && latestScrollY > 200) {
+        setHidden(true);
+      } else if (latestScrollY < prevScrollY) {
+        setHidden(false);
+      }
+      prevScrollY = latestScrollY;
+    });
+  }, [scrollY]);
+
+  // Menu toggle logic
   const handleToggle = () => {
     if (isToggling) {
       return;
@@ -22,13 +39,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={navbarstyles.nav}>
+    <motion.nav
+      className={navbarstyles.nav}
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <div className={navbarstyles.navlogo}>
         <h1>AK</h1>
       </div>
       <MenuBtn menuOpen={menuOpen} handleToggle={handleToggle} />
       <AnimatePresence>{menuOpen && <SideMenu />}</AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 
