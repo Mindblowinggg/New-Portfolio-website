@@ -1,6 +1,6 @@
 .Home2container {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   padding: 20px;
   border-bottom: 1px solid black;
