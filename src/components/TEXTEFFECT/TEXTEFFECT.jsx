@@ -8,7 +8,7 @@ const TEXTEFFECT = ({ text, fontSize }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.9", "start 0.35"],
+    offset: ["start 0.9", "start 0.45"],
   });
 
   const words = text.split(" ");
