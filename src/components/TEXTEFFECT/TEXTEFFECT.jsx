@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { useScroll, motion, useTransform } from 'framer-motion';
-import styles from './TEXTEFFECT.module.css';
+import styles from '../TEXTEFFECT/TEXTEFFECT.module.css';
 
-const text = "I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations. ";
 
-const TEXTEFFECT = () => {
+const TEXTEFFECT = ({ text, fontSize }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
@@ -13,13 +13,12 @@ const TEXTEFFECT = () => {
 
   const words = text.split(" ");
 
-  // Nested Word component 
   const Word = ({ word, scrollYProgress, start, end }) => {
-    const opacity = useTransform(scrollYProgress, [start, end], [0.3 , 1]); 
+    const opacity = useTransform(scrollYProgress, [start, end], [0.3, 1]);
     const color = useTransform(
       scrollYProgress,
       [start, end],
-      ["rgb(150, 150, 150)", "rgb(0, 0, 0)"] 
+      ["rgb(150, 150, 150)", "rgb(0, 0, 0)"]
     );
 
     return (
@@ -30,11 +29,12 @@ const TEXTEFFECT = () => {
   };
 
   return (
-    <p className={styles.paragraph} ref={element}>
+    // fontSize prop को style एट्रीब्यूट में उपयोग करें
+    <p className={styles.paragraph} ref={element} style={{ fontSize: fontSize }}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + (1 / words.length);
-        
+
         return (
           <Word
             key={i}
