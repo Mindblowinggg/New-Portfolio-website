@@ -11,8 +11,8 @@ export const projectsData = [
   },
   {
     media: 'https://demo.themetorium.net/html/jesper/assets/vids/1920/video-4-1920.mp4', 
-    heading: 'DIGITAL AGENCY', 
-    category: 'Motion Design',
+    heading: 'FASHION SHOOT', 
+    category: 'Artistic',
   },
   {
     media: 'https://webredox.net/demo/wp/jesper/wp-content/uploads/2025/06/portfolio-3-800x534.jpg', 
