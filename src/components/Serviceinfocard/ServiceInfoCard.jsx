@@ -2,7 +2,7 @@ import React from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from 'framer-motion';
-import styles from '../Serviceinfocard/Serviceinfocard.module.css';
+import styles from '../ServiceinfoCard/ServiceinfoCard.module.css';
 
 const ServiceInfoCard = ({ title, description, index, isOpen, onCardClick, className }) => {
   const formattedIndex = (index + 1).toString().padStart(2, "0");
@@ -23,6 +23,7 @@ const ServiceInfoCard = ({ title, description, index, isOpen, onCardClick, class
           </motion.div>
         </div>
       </div>
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
