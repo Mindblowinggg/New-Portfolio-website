@@ -54,13 +54,10 @@ const Home = () => {
             y: {
               duration: 1.5,
               repeat: Infinity,
-               repeatType: "loop",
+               repeatType: "reverse",
               ease: "easeInOut",
             },
-            opacity: {
-              duration: 0.8,
-              delay: 1.5,
-            },
+            
           },
         }}
         style={{ position: "absolute", bottom: 30, right: 20 }}
