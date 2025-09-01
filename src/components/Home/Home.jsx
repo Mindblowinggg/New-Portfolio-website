@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../Home/Home.module.css";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import SocialLinks from "./SocialLinks";
 import { FaArrowDown } from "react-icons/fa6";

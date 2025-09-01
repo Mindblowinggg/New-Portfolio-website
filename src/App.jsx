@@ -5,6 +5,7 @@ import "./App.css";
 import Home2 from "./components/Home2/Home2";
 import Projects from "./components/Projects/Projects";
 import Marquees from "./components/Marquees/Marquees";
+import Services from "./components/Services/Services";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Home2 />
       <Projects/>
       <Marquees/>
+      <Services/>
     </div>
   );
 };
