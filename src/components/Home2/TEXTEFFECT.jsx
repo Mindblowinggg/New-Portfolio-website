@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
-import styles from './ParagraphText.module.css';
+import styles from './TEXTEFFECT.module.css';
 
 const text = "I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations. ";
 
-const ParagraphText = () => {
+const TEXTEFFECT = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
@@ -49,4 +49,4 @@ const ParagraphText = () => {
   );
 };
 
-export default ParagraphText;
+export default TEXTEFFECT;
