@@ -28,7 +28,8 @@ const SocialLinks = () => {
           transition={{
             duration: 0.5,
             delay: 1 + index * 0.15,
-            ease: "easeInOut",
+            ease: "backInOut",
+            
           }}
           key={index}
           href={link.href}

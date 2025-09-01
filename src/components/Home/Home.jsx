@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../Home/Home.module.css";
 import { motion } from "framer-motion";
 import SocialLinks from "./SocialLinks";
 import { FaArrowDown } from "react-icons/fa6";
 
 const Home = () => {
+  const [isArrowVisible, setIsArrowVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsArrowVisible(true);
+    }, 1600); 
+
+    return () => clearTimeout(timer); 
+  }, []);
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.title}>
@@ -45,25 +55,30 @@ const Home = () => {
         </motion.p>
       </div>
       <SocialLinks />
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: {
+      {isArrowVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{
+            opacity: 1,
+            y: 10,
+          }}
+          transition={{
             y: {
               duration: 1.5,
               repeat: Infinity,
-               repeatType: "reverse",
+              repeatType: "reverse",
               ease: "easeInOut",
             },
-            
-          },
-        }}
-        style={{ position: "absolute", bottom: 30, right: 20 }}
-      >
-        <FaArrowDown size={25} />
-      </motion.div>
+            opacity: {
+                duration: 0.5,
+                ease: "easeInOut",
+            }
+          }}
+          style={{ position: "absolute", bottom: 30, right: 20 }}
+        >
+          <FaArrowDown size={25} />
+        </motion.div>
+      )}
     </div>
   );
 };
