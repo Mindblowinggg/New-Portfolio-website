@@ -3,7 +3,7 @@ import TEXTEFFECT from "../TEXTEFFECT/TEXTEFFECT";
 import styles from "../Services/Services.module.css";
 import ServiceInfoCard from "../Serviceinfocard/ServiceInfoCard";
 import { servicesData } from "../../assets/ServicesData";
-import serviceCardStyles from '../ServiceInfoCard/ServiceInfoCard.module.css';
+import serviceCardStyles from '../Serviceinfocard/ServiceInfoCard.module.css';
 
 const Services = () => {
   // Active card ka index store karne ke liye state banayein//
