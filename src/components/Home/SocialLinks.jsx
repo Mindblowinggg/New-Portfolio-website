@@ -7,7 +7,6 @@ import {
   FaXTwitter,
   FaTiktok,
   FaInstagram,
-  
 } from "react-icons/fa6";
 
 import styles from "../Home/SocialLinks.module.css";
@@ -24,9 +23,13 @@ const SocialLinks = () => {
     <div className={styles.sociallinkscontainer}>
       {socialLinks.map((link, index) => (
         <motion.a
-         initial={{opacity:0, y:35}}
-         animate={{ opacity:1 , y:0}}
-           transition={{ duration: 0.5, delay: 1 + index * 0.15 }}
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 1 + index * 0.15,
+            ease: "easeInOut",
+          }}
           key={index}
           href={link.href}
           target="_blank"
