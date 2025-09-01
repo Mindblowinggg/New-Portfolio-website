@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import navbarstyles from "../Navbar/Navbar.module.css";
 import MenuBtn from "./MenuBtn";
