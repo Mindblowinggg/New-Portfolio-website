@@ -1,4 +1,7 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 import {
   FaFacebookF,
   FaXTwitter,
@@ -20,14 +23,17 @@ const SocialLinks = () => {
   return (
     <div className={styles.sociallinkscontainer}>
       {socialLinks.map((link, index) => (
-        <a
+        <motion.a
+         initial={{opacity:0, y:35}}
+         animate={{ opacity:1 , y:0}}
+           transition={{ duration: 0.5, delay: 1 + index * 0.15 }}
           key={index}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
         >
           {link.icon}
-        </a>
+        </motion.a>
       ))}
     </div>
   );
