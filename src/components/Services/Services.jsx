@@ -6,7 +6,7 @@ import { servicesData } from "../../assets/ServicesData";
 import serviceCardStyles from '../Serviceinfocard/Serviceinfocard.module.css';
 
 const Services = () => {
-  // Active card ka index store karne ke liye state banayein
+  // Active card ka index store karne ke liye state banayein//
   const [openCardIndex, setOpenCardIndex] = useState(null);
 
   const handleCardClick = (index) => {
