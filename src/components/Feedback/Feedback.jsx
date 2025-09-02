@@ -9,7 +9,7 @@ const Feedback = () => {
   const constraintsRef = useRef(null); 
 
   const handleDragEnd = (event, info) => {
-    if (Math.abs(info.offset.x) > 150) {
+    if (Math.abs(info.offset.x) > 100) {
       const newOrder = [...cards];
       const draggedCard = newOrder.shift();
       newOrder.push(draggedCard);
