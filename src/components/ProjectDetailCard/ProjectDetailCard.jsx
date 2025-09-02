@@ -26,10 +26,10 @@ const ProjectDetailCard = ({ media, heading, category, index }) => {
   return (
     <motion.div
       className={styles.cardContainer}
-      initial={{ opacity: 0.6, scale: 0.7 }}
+      initial={{ opacity: 1, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 , ease:"easeInOut" }}
-      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.7 , ease:"easeInOut" }}
+      viewport={{ once: false, amount: 0.4 }}
     >
       <div className={styles.mediaWrapper}>{renderMedia()}</div>
       <div className={styles.cardContent}>
