@@ -1,0 +1,10 @@
+/* Awards.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  height: 100vh; /* This centers the content vertically in the viewport */
+  text-align: center; /* This ensures the text inside the children is centered */
+}

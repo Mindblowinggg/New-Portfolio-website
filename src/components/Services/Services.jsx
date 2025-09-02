@@ -6,12 +6,11 @@ import { servicesData } from "../../assets/ServicesData";
 import serviceCardStyles from '../Serviceinfocard/ServiceInfoCard.module.css';
 
 const Services = () => {
-  // Active card ka index store karne ke liye state banayein//
+  
   const [openCardIndex, setOpenCardIndex] = useState(null);
 
   const handleCardClick = (index) => {
-    // Agar current card open hai, to close karein .
-    // Warna, current card ka index set karke open karein.
+   
     setOpenCardIndex(index === openCardIndex ? null : index);
   };
 
