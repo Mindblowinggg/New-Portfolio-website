@@ -1,11 +1,21 @@
+/* ProjectDetailCard.module.css */
+
 .cardContainer {
+  /* ये स्टाइल्स आपके प्रोजेक्ट को स्टिकी बनाते हैं */
+  position: sticky;
+  top: 70px; /* Adjust this value to control where the cards 'stick' */
+  
+  /* पुराने स्टाइल्स */
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   max-width: 400px;
   margin-bottom: 50px;
-  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mediaWrapper {
@@ -25,6 +35,8 @@
 .cardContent {
   position: relative;
   display: flex;
+  border-radius: 8px;
+  padding: 8px;
   justify-content: space-between;
 }
 
@@ -42,7 +54,6 @@
 }
 
 .number {
-
   font-size: 2em;
   font-weight: bold;
   color: #bfbcbc;
