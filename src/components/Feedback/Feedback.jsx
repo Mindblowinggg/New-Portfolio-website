@@ -9,7 +9,6 @@ const Feedback = () => {
   const constraintsRef = useRef(null); 
 
   const handleDragEnd = (event, info) => {
-    // A slightly larger threshold makes the swipe more intentional
     if (Math.abs(info.offset.x) > 100) { 
       const newOrder = [...cards];
       const draggedCard = newOrder.shift();
@@ -33,19 +32,19 @@ const Feedback = () => {
               key={card.id}
               className={styles.reviewCard}
               drag={isTopCard ? "x" : false}
-              // The drag is now constrained to a box centered on the card
               dragConstraints={isTopCard ? { left: 0, right: 0 } : false}
               onDragEnd={isTopCard ? handleDragEnd : undefined}
               layout
               style={{
                 zIndex: cards.length - index,
                 cursor: isTopCard ? "grab" : "default", 
+                backgroundColor: "#e5e3dc", 
               }}
               animate={{
                 x: index * 15,
                 y: index * 10,
                 scale: 1 - index * 0.05,
-                opacity: 1 - index * 0.1,
+                // Opacity has been removed from here
               }}
               transition={{
                 type: "spring",
