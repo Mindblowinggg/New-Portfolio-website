@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import styles from "./Feedback.module.css";
 import TEXTEFFECT from '../TEXTEFFECT/TEXTEFFECT';
 import { reviewsData } from "../../assets/Reviewdata";
@@ -7,6 +7,8 @@ import { reviewsData } from "../../assets/Reviewdata";
 const Feedback = () => {
   const [cards, setCards] = useState(reviewsData);
   const constraintsRef = useRef(null); 
+  const x = useMotionValue(0); 
+  const backgroundOpacity = useTransform(x, [-100, 0, 100], [0, 1, 0]);
 
   const handleDragEnd = (event, info) => {
     if (Math.abs(info.offset.x) > 50) {
@@ -14,6 +16,7 @@ const Feedback = () => {
       const draggedCard = newOrder.shift();
       newOrder.push(draggedCard);
       setCards(newOrder);
+      x.set(0); 
     }
   };
 
@@ -21,7 +24,7 @@ const Feedback = () => {
     <div className={styles.container}>
       <TEXTEFFECT text="WHAT THEY SAY" fontSize={"20px"} />
       <TEXTEFFECT text={"FEEDBACK"} fontSize={"64px"} />
-      <h2 style={{fontWeight:"300" ,fontSize:"20px", fontFamily:"Poppins" , marginLeft:"8px", marginTop:"30px"}}>GENUINE WORDS FROM THE PEOPLE I'VE HAD THE PLEASURE TO WORK WITH.</h2>
+      <h2 style={{fontWeight:"300" ,fontSize:"20px", fontFamily:"Poppins" , marginLeft:"8px", marginTop:"30px"}}>GENUINE WORDS FROM THE PEOPLE I've HAD THE PLEASURE TO WORK WITH.</h2>
 
       <div className={styles.cardStackWrapper} ref={constraintsRef}>
         {cards.map((card, index) => {
@@ -38,13 +41,12 @@ const Feedback = () => {
               style={{
                 zIndex: cards.length - index,
                 cursor: isTopCard ? "grab" : "default",
-                
+                opacity: isTopCard ? backgroundOpacity : 1, 
               }}
               animate={{
                 x: index * 15,
                 y: index * 10,
                 scale: 1 - index * 0.05,
-                opacity: 1 - index * 0.1,
               }}
               transition={{
                 type: "spring",
