@@ -44,12 +44,11 @@ const Feedback = () => {
                 x: index * 15,
                 y: index * 10,
                 scale: 1 - index * 0.05,
-                // Opacity has been removed from here
               }}
               transition={{
                 type: "spring",
-                stiffness: 300,
-                damping: 30,
+                stiffness: 150, 
+                damping: 40,
               }}
             >
               <p className={styles.number}>{String(card.id).padStart(2, "0")}</p>
