@@ -1,12 +1,10 @@
-/* Marquees.module.css */
+
 
 .marquee_container {
-  /* position: relative; को यहाँ से हटा दें */
   width: 100%;
   height: 22vh;
   overflow: hidden;
   padding: 20px 0px;
-  /* Add display: flex for proper flow */
   display: flex;
   justify-content: space-between;
   flex-direction: column;

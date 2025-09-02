@@ -1,11 +1,6 @@
-/* ProjectDetailCard.module.css */
-
 .cardContainer {
-  /* ये स्टाइल्स आपके प्रोजेक्ट को स्टिकी बनाते हैं */
   position: sticky;
-  top: 70px; /* Adjust this value to control where the cards 'stick' */
-  
-  /* पुराने स्टाइल्स */
+  top: 70px;
   display: flex;
   flex-direction: column;
   gap: 20px;

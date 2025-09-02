@@ -15,11 +15,11 @@ const Projects = () => {
       </p>
       <Button />
 
-      {/* यह वह div है जिसका आपने ज़िक्र किया था। */}
+     
       <div style={{ position: 'relative', width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' , marginTop:"50px"}}>
         {projectsData.map((project, index) => (
           <ProjectDetailCard
-            key={project.media} // यहाँ key यूनीक होनी चाहिए
+            key={project.media} 
             media={project.media}
             heading={project.heading}
             category={project.category}
