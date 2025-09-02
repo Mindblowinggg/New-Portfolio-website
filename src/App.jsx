@@ -6,6 +6,7 @@ import Home2 from "./components/Home2/Home2";
 import Projects from "./components/Projects/Projects";
 import Marquees from "./components/Marquees/Marquees";
 import Services from "./components/Services/Services";
+import CardStackDrag from "./components/Cardstack";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Projects/>
       <Marquees/>
       <Services/>
+      <CardStackDrag/>
     </div>
   );
 };
