@@ -27,7 +27,7 @@ const ProjectDetailCard = ({ media, heading, category, index, topOffset }) => {
     <motion.div
       className={styles.cardContainer}
       style={{ top: `${topOffset}px` }}
-      initial={{ opacity: 1, scale: 0.85 }}
+      initial={{ opacity: 1, scale: 1 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.4 }}
