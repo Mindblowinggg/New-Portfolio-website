@@ -1,10 +1,23 @@
-/* Awards.module.css */
 
 .container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: center;
   align-items: center;
-  height: 100vh; /* This centers the content vertically in the viewport */
-  text-align: center; /* This ensures the text inside the children is centered */
+  text-align: center;
+}
+
+.awardlist {
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+  width: 100vw;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; 
+}
+
+.eachaward {
+  border-bottom: 1px black solid;
+  padding: 10px 15px;
+  font-size: 20px;
 }
