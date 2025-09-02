@@ -57,14 +57,14 @@ const Awards = () => {
           <motion.div
             key={index}
             className={styles.eachaward}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ 
-              duration: 0.6,
+              duration: 0.3,
               delay: index * 0.1,
-              ease: "easeOut"
+              ease: "easeInOut"
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
               <p>{award.title}</p>
