@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "./Feedback.module.css";
 import TEXTEFFECT from '../TEXTEFFECT/TEXTEFFECT';
 import { reviewsData } from "../../assets/Reviewdata";
@@ -7,16 +7,14 @@ import { reviewsData } from "../../assets/Reviewdata";
 const Feedback = () => {
   const [cards, setCards] = useState(reviewsData);
   const constraintsRef = useRef(null); 
-  const x = useMotionValue(0); 
-  const backgroundOpacity = useTransform(x, [-100, 0, 100], [0, 1, 0]);
 
   const handleDragEnd = (event, info) => {
-    if (Math.abs(info.offset.x) > 50) {
+    // A slightly larger threshold makes the swipe more intentional
+    if (Math.abs(info.offset.x) > 100) { 
       const newOrder = [...cards];
       const draggedCard = newOrder.shift();
       newOrder.push(draggedCard);
       setCards(newOrder);
-      x.set(0); 
     }
   };
 
@@ -35,18 +33,19 @@ const Feedback = () => {
               key={card.id}
               className={styles.reviewCard}
               drag={isTopCard ? "x" : false}
-              dragConstraints={constraintsRef} 
+              // The drag is now constrained to a box centered on the card
+              dragConstraints={isTopCard ? { left: 0, right: 0 } : false}
               onDragEnd={isTopCard ? handleDragEnd : undefined}
               layout
               style={{
                 zIndex: cards.length - index,
-                cursor: isTopCard ? "grab" : "default",
-                opacity: isTopCard ? backgroundOpacity : 1, 
+                cursor: isTopCard ? "grab" : "default", 
               }}
               animate={{
                 x: index * 15,
                 y: index * 10,
                 scale: 1 - index * 0.05,
+                opacity: 1 - index * 0.1,
               }}
               transition={{
                 type: "spring",
