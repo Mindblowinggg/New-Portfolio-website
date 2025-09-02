@@ -1,0 +1,54 @@
+/* Feedback.module.css */
+
+.container {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.cardStackWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px; 
+  height: 400px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 50px;
+}
+
+.reviewCard {
+ 
+  position: absolute;
+  width: 80%; 
+  height: 300px;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.number {
+  font-size: 2em;
+  font-weight: 300;
+  color: #a0a0a0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.reviewText {
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.reviewer {
+  font-weight: 500;
+  color: #7f7e7c;
+  margin-top: 10px;
+}

@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Marquees from "./components/Marquees/Marquees";
 import Services from "./components/Services/Services";
 import Awards from "./components/Awards/Awards";
+import Feedback from "./components/Feedback/Feedback";
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
       <Marquees />
       <Services />
       <Awards />
+      <Feedback/>
+    
     </div>
   );
 };
