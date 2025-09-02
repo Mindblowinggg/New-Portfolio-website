@@ -9,7 +9,7 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1); /* x-offset, y-offset, blur, spread, color */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* x-offset, y-offset, blur, spread, color */
 }
 
 .mediaWrapper {
