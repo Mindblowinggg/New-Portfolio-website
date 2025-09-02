@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./ProjectDetailCard.module.css";
 
-const ProjectDetailCard = ({ media, heading, category, index }) => {
+const ProjectDetailCard = ({ media, heading, category, index, topOffset }) => {
   const formattedIndex = (index + 1).toString().padStart(2, "0");
   const isVideo = media.endsWith(".mp4") || media.endsWith(".webm") || media.endsWith(".ogg");
 
@@ -26,9 +26,10 @@ const ProjectDetailCard = ({ media, heading, category, index }) => {
   return (
     <motion.div
       className={styles.cardContainer}
+      style={{ top: `${topOffset}px` }}
       initial={{ opacity: 1, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.7 , ease:"easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.4 }}
     >
       <div className={styles.mediaWrapper}>{renderMedia()}</div>

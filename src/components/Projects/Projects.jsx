@@ -24,7 +24,6 @@ const Projects = () => {
           flexDirection: "column",
           alignItems: "center",
           marginTop: "50px",
-          gap:"20px"
         }}
       >
         {projectsData.map((project, index) => (
@@ -34,6 +33,7 @@ const Projects = () => {
             heading={project.heading}
             category={project.category}
             index={index}
+            topOffset={90 + index * 10}
           />
         ))}
       </div>
