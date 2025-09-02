@@ -1,12 +1,12 @@
 .cardContainer {
+
   position: sticky;
-  top: 70px;
+  top: 90px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 50px;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;

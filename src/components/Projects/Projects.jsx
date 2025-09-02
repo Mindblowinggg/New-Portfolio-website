@@ -15,11 +15,21 @@ const Projects = () => {
       </p>
       <Button />
 
-     
-      <div style={{ position: 'relative', width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' , marginTop:"50px"}}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "50px",
+          gap:"100px"
+        }}
+      >
         {projectsData.map((project, index) => (
           <ProjectDetailCard
-            key={project.media} 
+            key={project.media}
             media={project.media}
             heading={project.heading}
             category={project.category}
