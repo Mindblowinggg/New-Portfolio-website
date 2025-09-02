@@ -24,6 +24,7 @@ const Projects = () => {
           flexDirection: "column",
           alignItems: "center",
           marginTop: "50px",
+          gap:"50px"
         }}
       >
         {projectsData.map((project, index) => (
