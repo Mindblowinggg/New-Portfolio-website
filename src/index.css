@@ -4,6 +4,8 @@
 
 @import "locomotive-scroll/dist/locomotive-scroll.css";
 
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +13,7 @@
   font-family: "Big Shoulders", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+
 }
 
 body, html{

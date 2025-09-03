@@ -49,7 +49,7 @@ const Navbar = () => {
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.7, ease: "easeInOut" }}
     >
-      <div className={navbarstyles.navlogo}>
+      <div >
         <h1>AK</h1>
       </div>
       <MenuBtn menuOpen={menuOpen} handleToggle={handleToggle} />

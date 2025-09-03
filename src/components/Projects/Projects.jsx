@@ -27,7 +27,7 @@ const Projects = () => {
         ))}
       </div>
       <div className={styles.buttonContainer}>
-        <Button />
+        <Button text={"ALLL <br/> PROJECTS"} />
       </div>
     </div>
   );

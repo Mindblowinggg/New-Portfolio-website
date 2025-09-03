@@ -8,6 +8,11 @@ import Marquees from "./components/Marquees/Marquees";
 import Services from "./components/Services/Services";
 import Awards from "./components/Awards/Awards";
 import Feedback from "./components/Feedback/Feedback";
+import Contact from "./components/Contact/Contact";
+import { Link, Links } from "react-router-dom";
+import LinksSection from "./components/LINKS/LinksSection";
+import Sitemap from "./components/Sitemap/Sitemap";
+import ContactLinks from "./components/ContactLinks/ContactLinks";
 
 const App = () => {
   return (
@@ -20,7 +25,10 @@ const App = () => {
       <Services />
       <Awards />
       <Feedback/>
-    
+      <Contact/>
+      <LinksSection/>
+      <Sitemap/>
+      <ContactLinks/>
     </div>
   );
 };
