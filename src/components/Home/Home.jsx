@@ -11,9 +11,9 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsArrowVisible(true);
-    }, 1600); 
+    }, 1600);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -55,7 +55,9 @@ const Home = () => {
           FrontEnd developer <br /> (React js.)
         </motion.p>
       </div>
-      <SocialLinks />
+      <div style={{ position: "absolute", bottom: 30, left: 20 }}>
+        <SocialLinks />
+      </div>
       {isArrowVisible && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -71,9 +73,9 @@ const Home = () => {
               ease: "easeInOut",
             },
             opacity: {
-                duration: 0.5,
-                ease: "easeInOut",
-            }
+              duration: 0.5,
+              ease: "easeInOut",
+            },
           }}
           style={{ position: "absolute", bottom: 30, right: 20 }}
         >
