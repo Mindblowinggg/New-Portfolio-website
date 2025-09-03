@@ -15,7 +15,7 @@ const Marquees = () => {
       </div>
 
       <div className={styles.marquee_wrapper_right_direction}>
-        <Marquee direction="right">
+        <Marquee  direction="right">
           <p className={styles.marquee_text_right}>
             <FaCode color="black" className={styles.icon} />
             Thank you for visiting!

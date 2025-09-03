@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-// import Lottie from "react-lottie";
 import styles from "./Feedback.module.css";
 import TEXTEFFECT from '../TEXTEFFECT/TEXTEFFECT';
 import { reviewsData } from "../../assets/Reviewdata";
-// import animationData from "../../assets/Swipe Cards 2.json";
+
 
 const Feedback = () => {
   const [cards, setCards] = useState(reviewsData);
@@ -19,14 +18,6 @@ const Feedback = () => {
     }
   };
 
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: animationData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice"
-  //   }
-  // };
 
   return (
     <div className={styles.container}>
@@ -35,13 +26,8 @@ const Feedback = () => {
       <TEXTEFFECT text={"FEEDBACK"} fontSize={"64px"} />
       <h2 style={{fontWeight:"300" ,fontSize:"20px", fontFamily:"Poppins" , marginLeft:"8px", marginTop:"30px"}}>GENUINE WORDS FROM THE PEOPLE I've HAD THE PLEASURE TO WORK WITH.</h2>
 
-      {/* <Lottie 
-        options={defaultOptions}
-        height={120}
-        width={120}
-       
-       
-      /> */}
+      <p><--SWIPE--></p>
+
 
       <div className={styles.cardStackWrapper} ref={constraintsRef}>
         {cards.map((card, index) => {

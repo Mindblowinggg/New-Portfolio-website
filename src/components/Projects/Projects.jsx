@@ -10,24 +10,12 @@ const Projects = () => {
     <div className={styles.container}>
       <TEXTEFFECT text="FEATURED WORK" fontSize={"20px"} />
       <TEXTEFFECT text={"PROJECTS"} fontSize={"64px"} />
-      <p style={{ padding: "8px", fontSize: "20px", fontWeight: "350", fontFamily: "Poppins", lineHeight: "25px" }}>
+      <p className={styles.heading}>
         Please explore my selected projects below. Click on each one for an overview
       </p>
-      <Button />
 
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "50px",
-          gap:"50px"
-        }}
-      >
-        {projectsData.map((project, index) => (
+      <div className={styles.projectsGrid}>
+        {projectsData.slice(0, 5).map((project, index) => (
           <ProjectDetailCard
             key={project.media}
             media={project.media}
@@ -37,6 +25,9 @@ const Projects = () => {
             topOffset={90 + index * 10}
           />
         ))}
+      </div>
+      <div className={styles.buttonContainer}>
+        <Button />
       </div>
     </div>
   );

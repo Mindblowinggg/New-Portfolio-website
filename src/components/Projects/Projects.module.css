@@ -3,3 +3,28 @@
   min-height: 100vh;
   background-color: #e5e3dc;
 }
+
+.heading {
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 350;
+  font-family: Poppins;
+  line-height: 25px;
+}
+
+.projectsGrid {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
