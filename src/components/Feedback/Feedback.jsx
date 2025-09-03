@@ -26,7 +26,7 @@ const Feedback = () => {
       <TEXTEFFECT text={"FEEDBACK"} fontSize={"64px"} />
       <h2 style={{fontWeight:"300" ,fontSize:"20px", fontFamily:"Poppins" , marginLeft:"8px", marginTop:"30px"}}>GENUINE WORDS FROM THE PEOPLE I've HAD THE PLEASURE TO WORK WITH.</h2>
 
-      <p><--SWIPE--></p>
+      <p>SWIPE</p>
 
 
       <div className={styles.cardStackWrapper} ref={constraintsRef}>
